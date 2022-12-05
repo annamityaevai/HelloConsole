@@ -83,6 +83,7 @@ string text = "- Я думаю, - сказал князь, улыбаясь, - �
 //             012
 // s[2] //  d
 
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 string Replace(string text, char oldValue, char newValue)
 {
     string result = String.Empty;
@@ -95,4 +96,10 @@ string Replace(string text, char oldValue, char newValue)
     return result;
 }
 string newText = Replace(text, ' ', '|');
+Console.WriteLine(newText);
+Console.WriteLine();
+newText = Replace(newText, 'к', 'К');
+Console.WriteLine(newText);
+Console.WriteLine();
+newText = Replace(newText, 'С', 'с');
 Console.WriteLine(newText);
